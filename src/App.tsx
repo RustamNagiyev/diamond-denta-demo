@@ -7,7 +7,6 @@ import React, { useState } from 'react';
 import { NavTab } from './types';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
-import { MobileNav } from './components/MobileNav';
 import { BookingModal } from './components/BookingModal';
 import { CreditModal } from './components/CreditModal';
 import { HomeView } from './views/HomeView';
@@ -47,7 +46,7 @@ export default function App() {
       />
 
       {/* Main View Router */}
-      <main className="flex-1 pb-16 md:pb-0">
+      <main className="flex-1">
         {currentTab === 'home' && (
           <HomeView
             onSelectTab={handleSelectTab}
@@ -76,14 +75,8 @@ export default function App() {
       {/* Footer */}
       <Footer />
 
-      {/* Mobile Sticky Bottom Navigation */}
-      <MobileNav
-        currentTab={currentTab}
-        onSelectTab={handleSelectTab}
-      />
-
       {/* Floating Instant Contact Buttons */}
-      <div className="fixed bottom-20 md:bottom-8 right-4 sm:right-6 z-40 flex flex-col gap-3">
+      <div className="fixed bottom-6 md:bottom-8 right-4 sm:right-6 z-40 flex flex-col gap-3">
         {/* Quick Phone Call Button */}
         <a
           href={`tel:${CLINIC_PHONE_RAW}`}

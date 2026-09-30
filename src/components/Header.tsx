@@ -40,13 +40,8 @@ export const Header: React.FC<HeaderProps> = ({
             <span className="text-[#C9A96E] text-lg font-serif tracking-widest group-hover:text-[#E6C487] transition-colors">
               ✦
             </span>
-            <div>
-              <div className="font-serif text-xl sm:text-2xl tracking-[0.2em] text-[#F5F1EA] font-normal leading-tight group-hover:text-[#C9A96E] transition-colors">
-                DIAMOND DENTA
-              </div>
-              <div className="text-[9px] sm:text-[10px] uppercase tracking-[0.25em] text-[#C9A96E] font-medium leading-none mt-0.5">
-                Estetik Dental Klinika
-              </div>
+            <div className="font-serif text-xl sm:text-2xl tracking-[0.2em] text-[#F5F1EA] font-normal leading-tight group-hover:text-[#C9A96E] transition-colors">
+              DIAMOND DENTA
             </div>
           </div>
         </button>
@@ -91,7 +86,7 @@ export const Header: React.FC<HeaderProps> = ({
 
           <button
             onClick={onOpenBooking}
-            className="px-4 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-medium tracking-wider text-[#0A0A0C] bg-[#C9A96E] hover:bg-[#E6C487] active:scale-[0.98] transition-all rounded-md shadow-[0_0_15px_rgba(201,169,110,0.2)] cursor-pointer"
+            className="hidden md:inline-flex px-4 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-medium tracking-wider text-[#0A0A0C] bg-[#C9A96E] hover:bg-[#E6C487] active:scale-[0.98] transition-all rounded-md shadow-[0_0_15px_rgba(201,169,110,0.2)] cursor-pointer"
           >
             Online Rezerv
           </button>
