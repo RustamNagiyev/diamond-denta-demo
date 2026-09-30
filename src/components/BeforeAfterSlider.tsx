@@ -1,5 +1,6 @@
 import React, { useState, useRef, useCallback, useEffect } from 'react';
 import { ChevronsLeftRight } from 'lucide-react';
+import { onImageFallbackError } from '../data/clinicData';
 
 interface BeforeAfterSliderProps {
   beforeImage: string;
@@ -90,6 +91,7 @@ export const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
         <img
           src={afterImage}
           alt={afterAlt}
+          onError={onImageFallbackError}
           referrerPolicy="no-referrer"
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
@@ -107,6 +109,7 @@ export const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
           <img
             src={beforeImage}
             alt={beforeAlt}
+            onError={onImageFallbackError}
             referrerPolicy="no-referrer"
             className="absolute inset-0 w-full h-full object-cover object-center max-w-none"
             style={{

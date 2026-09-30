@@ -11,16 +11,25 @@ export const CLINIC_HOURS = 'Hər gün 11:00 - 19:00';
 export const CLINIC_MAP_COORDINATES = '40.4093° N, 49.8671° E • Baku Center';
 export const CLINIC_MAPS_LINK = 'https://maps.google.com/?q=40.4093,49.8671';
 
+export const onImageFallbackError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+  const target = e.currentTarget;
+  target.onerror = null;
+  target.src =
+    'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><rect width="100%" height="100%" fill="%23141418" stroke="%23C9A96E" stroke-width="1"/></svg>';
+  target.style.backgroundColor = '#141418';
+  target.style.border = '1px solid #C9A96E';
+};
+
 export const IMAGES = {
-  heroSmile: '/src/assets/images/hero_smile_aesthetic_1790778572013.jpg',
-  labVeneer: '/src/assets/images/dental_lab_veneer_1790778585413.jpg',
-  implantPedestal: '/src/assets/images/dental_implant_pedestal_1790778602038.jpg',
-  clinicInterior: '/src/assets/images/dental_clinic_interior_1790778620293.jpg',
-  doctorPortrait: '/src/assets/images/dental_doctor_portrait_1790778642166.jpg',
-  bracesModel: '/src/assets/images/dental_braces_model_1790778658164.jpg',
-  surgerySuite: '/src/assets/images/dental_surgery_suite_1790778669574.jpg',
-  beforeTeeth: '/src/assets/images/teeth_before_shot_1790778731545.jpg',
-  afterTeeth: '/src/assets/images/teeth_after_shot_1790778746292.jpg',
+  heroSmile: '/images/hero-smile.jpg',
+  labVeneer: '/images/lab-veneer.jpg',
+  implantPedestal: '/images/implant-pedestal.jpg',
+  clinicInterior: '/images/clinic-interior.jpg',
+  doctorPortrait: '/images/doctor-portrait.jpg',
+  bracesModel: '/images/braces-model.jpg',
+  surgerySuite: '/images/surgery-suite.jpg',
+  beforeTeeth: '/images/teeth-before.jpg',
+  afterTeeth: '/images/teeth-after.jpg',
 };
 
 export const SERVICES_LIST: ServiceItem[] = [

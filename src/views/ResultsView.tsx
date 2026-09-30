@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BeforeAfterSlider } from '../components/BeforeAfterSlider';
-import { GALLERY_CASES, IMAGES, CLINIC_WHATSAPP_LINK } from '../data/clinicData';
+import { GALLERY_CASES, IMAGES, CLINIC_WHATSAPP_LINK, onImageFallbackError } from '../data/clinicData';
 import { MessageCircle, Sparkles } from 'lucide-react';
 
 interface ResultsViewProps {
@@ -119,6 +119,7 @@ export const ResultsView: React.FC<ResultsViewProps> = ({ onOpenBooking }) => {
                   <img
                     src={item.image}
                     alt={item.title}
+                    onError={onImageFallbackError}
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />

@@ -2,5 +2,7 @@
   "name": "Diamond Denta - Estetik Dental Klinika",
   "description": "Diamond Denta - Bakıda fərdi təbəssüm memarlığı, vinir, dental implantasiya və premium estetik stomatologiya.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }

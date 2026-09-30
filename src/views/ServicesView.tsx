@@ -1,5 +1,5 @@
 import React from 'react';
-import { SERVICES_LIST } from '../data/clinicData';
+import { SERVICES_LIST, onImageFallbackError } from '../data/clinicData';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 
 interface ServicesViewProps {
@@ -109,6 +109,7 @@ export const ServicesView: React.FC<ServicesViewProps> = ({ onOpenBooking }) => 
                     <img
                       src={service.image}
                       alt={service.title}
+                      onError={onImageFallbackError}
                       referrerPolicy="no-referrer"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     />

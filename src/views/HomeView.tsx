@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavTab } from '../types';
-import { SERVICES_LIST, IMAGES, CLINIC_WHATSAPP_LINK } from '../data/clinicData';
+import { SERVICES_LIST, IMAGES, CLINIC_WHATSAPP_LINK, onImageFallbackError } from '../data/clinicData';
 import {
   Sparkles,
   ArrowRight,
@@ -39,6 +39,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
           <img
             src={IMAGES.heroSmile}
             alt="Diamond Denta Estetik Gülüş"
+            onError={onImageFallbackError}
             referrerPolicy="no-referrer"
             className="w-full h-full object-cover object-center filter brightness-[0.75] contrast-[1.08] scale-105 transition-transform duration-1000 ease-out"
           />
@@ -246,6 +247,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 <img
                   src={IMAGES.clinicInterior}
                   alt="Reseption & Lounge"
+                  onError={onImageFallbackError}
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
@@ -262,6 +264,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 <img
                   src={IMAGES.doctorPortrait}
                   alt="Rəqəmsal Dental Studiya"
+                  onError={onImageFallbackError}
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
@@ -309,6 +312,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 <img
                   src={IMAGES.afterTeeth}
                   alt="Tam Gülüş Dizaynı"
+                  onError={onImageFallbackError}
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
@@ -335,6 +339,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 <img
                   src={IMAGES.heroSmile}
                   alt="Holivud Təbəssümü"
+                  onError={onImageFallbackError}
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
@@ -361,6 +366,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 <img
                   src={IMAGES.bracesModel}
                   alt="Xətti Bərabərləşdirmə"
+                  onError={onImageFallbackError}
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />

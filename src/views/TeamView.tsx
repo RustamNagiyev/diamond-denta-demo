@@ -1,5 +1,5 @@
 import React from 'react';
-import { IMAGES, CLINIC_PHONE_DISPLAY, CLINIC_WHATSAPP_LINK } from '../data/clinicData';
+import { IMAGES, CLINIC_PHONE_DISPLAY, CLINIC_WHATSAPP_LINK, onImageFallbackError } from '../data/clinicData';
 import { Award, GraduationCap, ArrowRight, MessageCircle } from 'lucide-react';
 
 interface TeamViewProps {
@@ -80,6 +80,7 @@ export const TeamView: React.FC<TeamViewProps> = ({ onOpenBooking }) => {
                     <img
                       src={doc.image}
                       alt={doc.name}
+                      onError={onImageFallbackError}
                       referrerPolicy="no-referrer"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     />
@@ -164,6 +165,7 @@ export const TeamView: React.FC<TeamViewProps> = ({ onOpenBooking }) => {
               <img
                 src={IMAGES.labVeneer}
                 alt="Keramik Laboratoriya"
+                onError={onImageFallbackError}
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover"
               />
